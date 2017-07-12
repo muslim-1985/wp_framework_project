@@ -46,11 +46,3 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
-	  <div id="blue">
-	    <div class="container">
-				<div class="row">
-					<h3>Blog List.</h3>
-				</div><!-- /row -->
-	    </div> <!-- /container -->
-	</div><!-- /blue -->
-	<div class="container mtb">

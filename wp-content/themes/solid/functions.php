@@ -245,6 +245,20 @@ function solid_content_width() {
 }
 add_action( 'after_setup_theme', 'solid_content_width', 0 );
 
+/* Init qoob libs */
+add_filter( 'qoob_libs', 'solid_add_theme_lib', 10, 2 );
+if ( ! function_exists( 'solid_add_theme_lib' ) ) {
+  /**
+   * Adding lib in qoob libs
+   *
+   * @param array $qoob_libs Array with url to qoob lib.
+   */
+  function solid_add_theme_lib( $qoob_libs ) {
+    array_push( $qoob_libs, get_template_directory() . '/blocks/lib.json' );
+    return $qoob_libs;
+  }
+}
+
 /**
  * Register widget area.
  *
@@ -262,7 +276,7 @@ function solid_widgets_init() {
 	) );
 
 		register_sidebar( array(
-			'name'          => esc_html__( 'Футер', 'solid' ),
+			'name'          => esc_html__( 'Футер инфо', 'solid' ),
 			'id'            => 'sidebar-2',
 			'description'   => esc_html__( 'Add widgets here.', 'solid' ),
 			'before_widget' => '<div id="%1$s" class="col-lg-4 widget %2$s">',
@@ -270,6 +284,7 @@ function solid_widgets_init() {
 			'before_title'  => '<h4>',
 			'after_title'   => '</h4><div class="hline-w"></div>',
 		) );
+
 }
 add_action( 'widgets_init', 'solid_widgets_init' );
 

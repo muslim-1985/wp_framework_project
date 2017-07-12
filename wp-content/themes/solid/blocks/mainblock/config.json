@@ -1,0 +1,44 @@
+{
+    "groups": "main",
+    "template": "template.hbs",
+    "settings": [{
+        "name": "block_id",
+        "label": "Block's id",
+        "type": "text"
+    },
+    {
+        "name": "header",
+        "label": "Block's title",
+        "type": "text"
+    },
+      {
+          "name": "header2",
+          "label": "Block's title2",
+          "type": "text"
+      },
+        {
+            "name": "header3",
+            "label": "Block's title3",
+            "type": "text"
+        },
+        {
+            "name": "header4",
+            "label": "Block's title4",
+            "type": "text"
+        },
+
+        {
+         "name": "image",
+         "label": "image",
+         "type": "image"
+       }
+    ],
+    "defaults": {
+      "block_id": "headerwrap",
+      "header": "Show your work with this beautiful theme",
+      "header2": "Eyecatching Bootstrap 3 Theme",
+      "header3": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "header4": "More Lorem Ipsum added here too.",
+      "image": "%block_url%/assets/img/browser.png"
+    }
+}
