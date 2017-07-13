@@ -4,10 +4,21 @@
         "id": "main",
         "label": "Main Blocks",
         "position": 0
-    }],
+    },
+    {
+        "id": "iconbox",
+        "label": "icon box",
+        "position": 1
+    }
+  ],
     "blocks": [{
         "name": "mainblock",
         "url": "%theme_url%/blocks/mainblock/"
-    }]
+    },
+    {
+        "name": "iconbox",
+        "url": "%theme_url%/blocks/iconbox/"
+    }
+  ]
 
 }

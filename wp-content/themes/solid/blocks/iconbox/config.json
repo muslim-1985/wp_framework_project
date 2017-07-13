@@ -1,0 +1,66 @@
+{
+    "groups": "iconbox",
+    "template": "template.hbs",
+    "settings": [{
+        "name": "block_id",
+        "label": "Block's id",
+        "type": "text"
+    },
+    {
+        "name": "boxes",
+        "label": "Items",
+         "type": "accordion",
+         "viewType": "expand",
+        "settings": [{
+         "name": "title",
+         "label": "Title",
+         "type": "text",
+         "placeholder": "Enter title"
+     },
+     {
+       "name": "icon",
+       "label": "icon",
+       "type": "icon"
+     },
+     {
+      "name": "text",
+      "label": "Text",
+      "type": "textarea",
+      "placeholder": "Enter text"
+    },
+     {
+      "name": "btn_link",
+      "label": "btn_link",
+      "type": "text",
+      "placeholder": "Enter link"
+     }
+   ]
+ }
+],
+    "defaults": {
+      "block_id": "service",
+      "boxes" : [
+        {
+        "title": "Handsomely Crafted",
+        "icon" : "fa fa-heart-o",
+        "text" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>",
+        "btn_link" : "#",
+        "order" : 1
+        },
+        {
+          "title": "Retina Ready",
+          "icon" : "fa fa-flask",
+          "text" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>",
+          "btn_link" : "#",
+          "order" : 2
+        },
+          {
+            "title": "Quality Theme",
+            "icon" : "fa fa-trophy",
+            "text" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>",
+            "btn_link" : "#",
+            "order" : 3
+          }
+      ]
+    }
+}
