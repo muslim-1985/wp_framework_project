@@ -9,7 +9,13 @@
         "id": "iconbox",
         "label": "icon box",
         "position": 1
-    }
+    },
+      {
+          "id": "portfolio",
+          "label": "Portfolio",
+          "position": 2
+      }
+
   ],
     "blocks": [{
         "name": "mainblock",
@@ -18,7 +24,16 @@
     {
         "name": "iconbox",
         "url": "%theme_url%/blocks/iconbox/"
+    },
+      {
+          "name": "portfolio",
+          "url": "%theme_url%/blocks/portfolio/"
+      },
+    {
+        "name": "medialib",
+        "url": "%theme_url%/blocks/medialib/"
     }
+
   ]
 
 }

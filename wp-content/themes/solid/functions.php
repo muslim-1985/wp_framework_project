@@ -266,7 +266,7 @@ if ( ! function_exists( 'solid_add_theme_lib' ) ) {
  */
 function solid_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'solid' ),
+		'name'          => esc_html__( 'Главная. Секция "посты"', 'solid' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'solid' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -284,6 +284,26 @@ function solid_widgets_init() {
 			'before_title'  => '<h4>',
 			'after_title'   => '</h4><div class="hline-w"></div>',
 		) );
+
+			register_sidebar( array(
+				'name'          => esc_html__( 'Главная. Последние записи', 'solid' ),
+				'id'            => 'sidebar-3',
+				'description'   => esc_html__( 'Add widgets here.', 'solid' ),
+				'before_widget' => '<div id="%1$s" class="col-lg-3 widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h4>',
+				'after_title'   => '</h4><div class="hline"></div>',
+			) );
+
+				register_sidebar( array(
+					'name'          => esc_html__( 'Главная. середина', 'solid' ),
+					'id'            => 'sidebar-4',
+					'description'   => esc_html__( 'Add widgets here.', 'solid' ),
+					'before_widget' => '<div id="%1$s" class="col-lg-4 col-lg-offset-1 widget %2$s">',
+					'after_widget'  => '</div>',
+					'before_title'  => '<h4>',
+					'after_title'   => '</h4>',
+				) );
 
 }
 add_action( 'widgets_init', 'solid_widgets_init' );

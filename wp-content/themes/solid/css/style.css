@@ -185,6 +185,18 @@ a:focus {
 	margin-bottom: 80px;
 }
 
+#recent-posts-2 ul {
+	padding: 0;
+	margin: 0 auto;
+}
+
+#recent-posts-2 ul>li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	line-height: 3.4rem;
+}
+
 .mb {
 	margin-bottom: 60px;
 }
