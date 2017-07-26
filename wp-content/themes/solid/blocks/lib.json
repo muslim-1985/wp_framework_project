@@ -14,7 +14,17 @@
           "id": "portfolio",
           "label": "Portfolio",
           "position": 2
-      }
+      },
+        {
+            "id": "about",
+            "label": "About",
+            "position": 3
+        },
+        {
+            "id": "middleblock",
+            "label": "Middleblock",
+            "position": 4
+        }
 
   ],
     "blocks": [{
@@ -32,7 +42,15 @@
     {
         "name": "medialib",
         "url": "%theme_url%/blocks/medialib/"
-    }
+    },
+      {
+          "name": "about",
+          "url": "%theme_url%/blocks/about/"
+      },
+      {
+          "name": "middleblock",
+          "url": "%theme_url%/blocks/middleblock/"
+      }
 
   ]
 

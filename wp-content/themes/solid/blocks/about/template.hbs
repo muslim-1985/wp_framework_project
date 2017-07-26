@@ -1,0 +1,71 @@
+
+<div class="container mtb">
+	 	<div class="row">
+	 		<div class="col-lg-4 col-lg-offset-1">
+		 		<h4>{{header1}}</h4>
+		 		<p> {{text}}</p>
+ 				<p><br/><a href="{{btn_link}}" class="btn btn-theme">More Info</a></p>
+	 		</div>
+
+	 		<div class="col-lg-3">
+	 			<h4>{{header2}}</h4>
+	 			<div class="hline"></div>
+      {{#each_with_sort faqs "order"}}
+	 			<p><a href="{{faq_link}}">{{title}}</a></p>
+        {{/each_with_sort}}
+	 		</div>
+
+	 		<div class="col-lg-3">
+	 			<h4>{{header3}}</h4>
+	 			<div class="hline"></div>
+          <div id="post-list">
+            <div class="posts" v-for="post in posts">
+              <p><a v-bind:href="post.link">\{{post.title.rendered}}</a></p>
+            </div>
+    	 			<!-- <p><a href="single-post.html">Retina ready is not an option.</a></p>
+    	 			<p><a href="single-post.html">Bootstrap 3 framework is the best.</a></p>
+    	 			<p><a href="single-post.html">You need this theme, buy it now.</a></p>
+    	 			<p><a href="single-post.html">This theme is what you need.</a></p> -->
+          </div>
+	 		</div>
+
+	 	</div><! --/row -->
+	 </div><! --/container -->
+   <script type="text/javascript">
+        var app = new Vue({
+              el: '#post-list',
+              data: {
+                message: '/wordpress/wp-json/wp/v2/posts',
+                posts: '[]'
+              },
+              methods: {
+                getAllPosts: function() {
+                  this.$http.get(this.message).then(function(response){
+                    this.posts = response.data;
+                  }, function(error){
+                      console.log(error);
+                  })
+                }
+              },
+              created: function() {
+                this.getAllPosts();
+              }
+        })
+
+      //   jQuery(document).ready(function($) {
+      //     $.ajax({
+      //       url: '/wordpress/wp-admin/admin-ajax.php',
+      //       type: 'POST',
+      //       dataType: 'json',
+      //       data: ({action: 'solid_block_load',
+      //              per_page: 5
+      //     }),
+      //       success: function(res){
+      //         console.log(res);
+      //       },
+      //       error: function(error){
+      //         console.log(error);
+      //       }
+      //   });
+      // });
+   </script>

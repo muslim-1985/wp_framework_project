@@ -285,26 +285,6 @@ function solid_widgets_init() {
 			'after_title'   => '</h4><div class="hline-w"></div>',
 		) );
 
-			register_sidebar( array(
-				'name'          => esc_html__( 'Главная. Последние записи', 'solid' ),
-				'id'            => 'sidebar-3',
-				'description'   => esc_html__( 'Add widgets here.', 'solid' ),
-				'before_widget' => '<div id="%1$s" class="col-lg-3 widget %2$s">',
-				'after_widget'  => '</div>',
-				'before_title'  => '<h4>',
-				'after_title'   => '</h4><div class="hline"></div>',
-			) );
-
-				register_sidebar( array(
-					'name'          => esc_html__( 'Главная. середина', 'solid' ),
-					'id'            => 'sidebar-4',
-					'description'   => esc_html__( 'Add widgets here.', 'solid' ),
-					'before_widget' => '<div id="%1$s" class="col-lg-4 col-lg-offset-1 widget %2$s">',
-					'after_widget'  => '</div>',
-					'before_title'  => '<h4>',
-					'after_title'   => '</h4>',
-				) );
-
 }
 add_action( 'widgets_init', 'solid_widgets_init' );
 
@@ -340,6 +320,10 @@ function solid_scripts() {
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js', array('jquery'));
 
 	wp_enqueue_script( 'solid-custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), '', true);
+
+	wp_enqueue_script( 'vue', get_template_directory_uri() . '/js/vue.js', array(), '', false);
+
+	wp_enqueue_script( 'vue-resource', get_template_directory_uri() . '/js/vue-resource.js', array(), '', false);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

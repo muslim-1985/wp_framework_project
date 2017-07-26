@@ -1,0 +1,83 @@
+{
+    "groups": "about",
+    "template": "template.hbs",
+    "settings": [
+    {
+        "name": "header1",
+        "label": "Header1",
+        "type": "text"
+    },
+      {
+          "name": "text",
+          "label": "text",
+          "type": "text"
+      },
+        {
+            "name": "btn_link",
+            "label": "btn_link",
+            "type": "text"
+        },
+          {
+              "name": "header2",
+              "label": "header2",
+              "type": "text"
+          },
+    {
+        "name": "faqs",
+        "label": "FAQ",
+         "type": "accordion",
+         "viewType": "expand",
+        "settings": [{
+         "name": "title",
+         "label": "Title",
+         "type": "text",
+         "placeholder": "Enter title"
+     },
+     {
+      "name": "faq_link",
+      "label": "Link",
+      "type": "text",
+      "placeholder": "Enter link"
+    }
+   ]
+ },
+   {
+       "name": "header3",
+       "label": "header3",
+       "type": "text"
+   }
+],
+    "defaults": {
+      "header1": "portfoliowrap",
+      "text" : "ПОСЛЕДНИЕ РАБОТЫ",
+      "btn_link" : "#",
+      "header2" : "Hello Muslim",
+      "faqs" : [
+        {
+        "title": "Образец графического дизайна",
+        "faq_link" : "#",
+        "order" : 1
+      },
+          {
+          "title": "Образец графического дизайна",
+          "faq_link" : "#",
+          "order" : 2
+        },
+            {
+            "title": "Образец графического дизайна",
+            "faq_link" : "#",
+            "order" : 3
+          },
+              {
+              "title": "Образец графического дизайна",
+              "faq_link" : "#",
+              "order" : 4
+            },
+                {
+                "title": "Образец графического дизайна",
+                "faq_link" : "#",
+                "order" : 5
+              }],
+        "header3" : "Всем привет друзья"      
+    }
+}

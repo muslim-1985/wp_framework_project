@@ -1,0 +1,41 @@
+{
+    "groups": "middleblock",
+    "template": "template.hbs",
+    "settings": [{
+        "name": "block_id",
+        "label": "Block's id",
+        "type": "text"
+    },
+     {
+       "name": "icon",
+       "label": "icon",
+       "type": "icon"
+     },
+        {
+         "name": "text",
+         "label": "Text",
+         "type": "textarea",
+         "placeholder": "Enter text"
+       },
+       {
+        "name": "autor",
+        "label": "Autor",
+        "type": "text",
+        "placeholder": "Enter autor name"
+    },
+       {
+        "name": "position",
+        "label": "Position",
+        "type": "text",
+        "placeholder": "Enter autor position"
+    }
+  ],
+    "defaults": {
+      "block_id": "twrap",
+      "icon" : "fa fa-comment-o",
+      "text" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>",
+      "autor": "Marcel Newman",
+      "position" : "WEB DESIGNER - BLACKTIE.CO",
+      "order" : 1
+    }
+}
